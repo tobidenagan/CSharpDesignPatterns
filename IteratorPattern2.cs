@@ -18,4 +18,16 @@ namespace CSharpDesignPatterns
                 if (filter(a)) yield return fieldSelector(a);    
         }
     }
+
+    class Orders
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string ProductNumber  { get; set; }
+        public DateTime DateCreated  { get; set; }
+    }
+    class OrderCollection
+    {
+        public IEnumerable<Orders> Orders { get; set; }
+    }
 }
