@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 
 namespace CSharpDesignPatterns
 {
-    internal class IteratorPattern
-    {
-    }
-
     class MonthWithDays
     {
         public int Days { get; set; }

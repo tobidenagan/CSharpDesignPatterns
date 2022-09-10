@@ -12,28 +12,35 @@ using CSharpDesignPatterns;
 #endregion
 
 #region IteratorPattern2
-var orders = new List<Orders>
-{
-    new Orders
-    {
-        Id = 1,
-        DateCreated = new DateTime(2000, 3, 3),
-        Name = "Orange",
-        ProductNumber = "PRD1"
-    },
-    new Orders
-    {
-        Id = 2,
-        DateCreated = new DateTime(2002, 3, 3),
-        Name = "Apple",
-        ProductNumber = "PRD2"
-    }
-};
+//var orders = new List<Orders>
+//{
+//    new Orders
+//    {
+//        Id = 1,
+//        DateCreated = new DateTime(2000, 3, 3),
+//        Name = "Orange",
+//        ProductNumber = "PRD1"
+//    },
+//    new Orders
+//    {
+//        Id = 2,
+//        DateCreated = new DateTime(2002, 3, 3),
+//        Name = "Apple",
+//        ProductNumber = "PRD2"
+//    }
+//};
 
-var filteredOrders = orders.FilteredSelect(x => x.Id > 1,x => x.Id + " " + x.Name + " " + x.ProductNumber);
+//var filteredOrders = orders.FilteredSelect(x => x.Id > 1,x => x.Id + " " + x.Name + " " + x.ProductNumber);
 
-foreach (var order in filteredOrders)
-{
-    Console.WriteLine($"{order}");
-}
+//foreach (var order in filteredOrders)
+//{
+//    Console.WriteLine($"{order}");
+//}
+#endregion
+
+
+#region FactoryPattern
+var notificationServiceProvider = new NotificationServiceProvider();
+var shippingService = new ShippingService(notificationServiceProvider);
+shippingService.ShipItem();
 #endregion
