@@ -52,7 +52,36 @@ using Microsoft.Extensions.Logging;
 //logger.LogInformation("This is a new log message");
 #endregion
 
-#region AdapterPattern2
+#region AdapterPattern2 (ObjectAdapterPattern)
+//var orders = new List<Order>
+//{
+//    new Order
+//    {
+//        Id = 1,
+//        OrderDate = new DateTime(2000, 3, 3),
+//        FirstName = "Tobi",
+//        LastName = "D",
+//        ProductNumber = "PRD1"
+//    },
+//    new Order
+//    {
+//        Id = 2,
+//        OrderDate = new DateTime(2002, 3, 3),
+//        FirstName = "Henry",
+//        LastName = "Smith",
+//        ProductNumber = "PRD2"
+//    }
+//};
+//var filteredOrders = orders.Select(x => new OrderItemViewModel(orders, x));
+
+//foreach (var order in filteredOrders)
+//{
+//    Console.WriteLine($"{order.CustomerId} {order.ProductNumber} {order.CustomerName} {order.OrderDate} {order.PreviousOrderDates}");
+//}
+#endregion
+
+
+#region AdapterPattern3 (ClassAdapterPattern)
 var orders = new List<Order>
 {
     new Order
@@ -72,10 +101,10 @@ var orders = new List<Order>
         ProductNumber = "PRD2"
     }
 };
-var filteredOrders = orders.Select(x => new OrderItemViewModel(orders, x));
+var filteredOrders = orders.Select(x => new OrderItemViewModel2(orders, x));
 
 foreach (var order in filteredOrders)
 {
-    Console.WriteLine($"{order.CustomerId} {order.CustomerName} {order.OrderDate} {order.PreviousOrderDates}");
+    Console.WriteLine($"{order.CustomerId} {order.ProductNumber} {order.CustomerName} {order.OrderDate} {order.PreviousOrderDates}");
 }
 #endregion

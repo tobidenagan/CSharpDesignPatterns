@@ -19,6 +19,7 @@ namespace CSharpDesignPatterns.DesignPatterns
         public int CustomerId => order.Id;
         public string CustomerName => order.FirstName + " " + order.LastName;
         public string OrderDate => order.OrderDate.ToString("d");
+        public string ProductNumber => order.ProductNumber;
         public string PreviousOrderDates { get; private set; }
     }
 
