@@ -1,10 +1,4 @@
-﻿    using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSharpDesignPatterns
+﻿namespace CSharpDesignPatterns.DesignPatterns
 {
     public static class EnumerableExtensions
     {
@@ -15,7 +9,7 @@ namespace CSharpDesignPatterns
             Func<T, TResult> fieldSelector)
         {
             foreach (var a in enumerable)
-                if (filter(a)) yield return fieldSelector(a);    
+                if (filter(a)) yield return fieldSelector(a);
         }
     }
 
@@ -23,8 +17,8 @@ namespace CSharpDesignPatterns
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string ProductNumber  { get; set; }
-        public DateTime DateCreated  { get; set; }
+        public string ProductNumber { get; set; }
+        public DateTime DateCreated { get; set; }
     }
     class OrderCollection
     {

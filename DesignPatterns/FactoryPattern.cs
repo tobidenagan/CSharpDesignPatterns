@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSharpDesignPatterns
+﻿namespace CSharpDesignPatterns.DesignPatterns
 {
     interface IUserNotifier
     {
@@ -26,7 +20,7 @@ namespace CSharpDesignPatterns
     }
     class NotificationServiceProvider
     {
-        public IUserNotifier GetUserNotifier() 
+        public IUserNotifier GetUserNotifier()
         {
 #if DEBUG
             return new TestUserNotifier();
@@ -50,4 +44,3 @@ namespace CSharpDesignPatterns
         }
     }
 }
-    

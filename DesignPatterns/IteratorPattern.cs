@@ -1,11 +1,6 @@
-﻿    using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
-namespace CSharpDesignPatterns
+namespace CSharpDesignPatterns.DesignPatterns
 {
     class MonthWithDays
     {
@@ -17,7 +12,7 @@ namespace CSharpDesignPatterns
     {
         private int year = 1;
         private int month = 0;
-        public MonthWithDays Current => new MonthWithDays() 
+        public MonthWithDays Current => new MonthWithDays()
         {
             Date = $"{year.ToString().PadLeft(4, '0')}-{month}",
             Days = DateTime.DaysInMonth(year, month)
@@ -51,7 +46,7 @@ namespace CSharpDesignPatterns
     {
         public IEnumerator<MonthWithDays> GetEnumerator()
         {
-            return  new DaysInMonthEnumerator();
+            return new DaysInMonthEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
