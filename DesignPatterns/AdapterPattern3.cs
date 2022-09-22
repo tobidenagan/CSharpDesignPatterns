@@ -31,5 +31,9 @@ namespace CSharpDesignPatterns.DesignPatterns
     }
     public interface IOrderItemViewModel
     {
+        int CustomerId { get; }
+        string CustomerName { get; }
+        string OrderDate { get; }
+        string PreviousOrderDates { get; }
     }
 }

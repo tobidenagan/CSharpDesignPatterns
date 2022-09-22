@@ -6,7 +6,7 @@ using CSharpDesignPatterns.DesignPatterns;
 using CSharpDesignPatterns.Models;
 using Microsoft.Extensions.Logging;
 
-#region IteratorPattern1
+#region IteratorPattern
 //var collection = new DaysInMonthCollection();
 //foreach (var monthWithDays in collection)
 //{
@@ -79,7 +79,6 @@ using Microsoft.Extensions.Logging;
 //    Console.WriteLine($"{order.CustomerId} {order.ProductNumber} {order.CustomerName} {order.OrderDate} {order.PreviousOrderDates}");
 //}
 #endregion
-
 
 #region AdapterPattern3 (ClassAdapterPattern)
 var orders = new List<Order>
